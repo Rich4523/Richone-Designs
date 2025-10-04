@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2">{{ category }}</h1>
+                            <p class="lead text-white-50 mb-4">Category Page</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Pricing section-->
+        
+        <section class="bg-light py-5 border-bottom">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Our Apps</h2>
+                    <p class="lead mb-0">With our no hassle pricing plans</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <!-- Pricing card free-->
+
+                    {% for product in products %}
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            
+                    <!-- Product Details -->
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold text-muted">$ {{ product.price }}</div>
+                                <div class="mb-3">
+                                    <span class="display-6 fw-bold">{{ product.name }}</span>
+                                    
+                                    <img class="card-img-top style=" src="{{ product.image1.url }}"alt="..." style="width:60%;max-width:300px" />
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>{{ product.category }}</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i> Description: 
+                                        {{ product.description }}
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i> Availability: 
+                                        {{ product.available }}
+                                    </li>
+                                    
+                                    
+                                </ul>
+                                <div class="d-grid"><a class="btn btn-outline-primary" href="{% url 'product' product.id %}">View Product</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+
+
+                    
+                    
+                    
+                </div>
+            </div>
+        </section>
+        
+        
+        {% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2">Privacy Policies</h1>
+                            <p class="lead text-white-50 mb-4">At Rich One Designs we take your privacy seriously.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <center>
+        <div class="card w-75 mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Basketball Tracker</h5>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">The app doesn't share personal data about the user of any kind. All data collected by the app is stored internally in the app.</li>
+              <li class="list-group-item">The app does not access location services, the app camera, or the app microphone.</li>
+              <li class="list-group-item">The app does not collect user analytics.</li>
+            </ol>
+            
+          </div>
+        </div>
+
+
+        <div class="card w-75 mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Vegan Dine</h5>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">The app does not collect or share any personal information about the user.</li>
+              <li class="list-group-item">The app does not use location services, the app camera, or the app microphone.</li>
+              <li class="list-group-item">No user analytics are collected by the app.</li>
+              <li class="list-group-item">The app allows access to the web. Website links to restaurants are provided in the app</li>
+              
+            </ol>  
+          </div>
+        </div>
+
+        <div class="card w-75 mb-3">
+          <div class="card-body">
+            <h5 class="card-title">CanInvest</h5>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">The app does not collect or store any data, or share any personal information about the user.</li>
+              <li class="list-group-item">The app does not use location services, the app camera, or the app microphone.</li>
+              <li class="list-group-item">No user analytics are collected by the app.</li>
+              <li class="list-group-item">The app allows access to the web. Website links to several websites are provided in the app</li>
+              
+            </ol>  
+          </div>
+        </div>
+      </center>
+      
+        <br/><br/>
+        <center>
+        <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+        </center>
+
+{% endblock %}

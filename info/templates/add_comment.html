@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/><br/><br/>
+    <center>
+ <h1>We'd love to hear from you!</h1>
+ <br/>   
+<h3>Get in touch and tell us what features you would like to see in our apps</h3>
+    <br/><br/>
+{% if submitted %}
+    Your message was submitted successfully!
+
+{% else %}
+                
+     <div class="row g-3 align-items-center">
+        <div class="col-sm-8"> 
+        
+            <form action="" method=POST >   
+                      
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <input type="submit" value="Submit" class="btn btn-primary">
+        
+            </form>
+        
+        </div>
+    </div>
+
+    
+{% endif %}
+        
+    <br/><br/><br/>
+    
+
+    <br/><br/><br/>
+
+
+
+    </center>
+{% endblock %}

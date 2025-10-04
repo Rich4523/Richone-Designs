@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2">{{ product.name }}</h1>
+                            <p class="lead text-white-50 mb-4">{{ product.header }}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+<center>
+<div class="w-75 p-3">
+    <br/><br/>
+        <div class="card mb-4">
+        <div class="row g-0">
+          
+         <div class="col-md-4">
+         <img src="{{ product.image1.url }}" class="img-fluid rounded-start" alt="..." style="width:50%;max-width:300px">
+        </div>
+      
+    <div class="col-md-8">
+      <div class="card-body">
+        
+        <h5 class="card-title">{{ product.name }}</h5>
+        <li align="left" class="card-text">{{ product.description2 }}</li>
+        <li align="left" class="card-text">{{ product.available }}</li>
+   
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+</center>
+<br/>
+
+  <center>
+    
+    <div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-3">
+      <div class="card" style="height:40rem;">
+
+        <img src="{{ product.image2.url }}" class="card-img-top" alt="..." style="width:30%;max-width:300px">
+      
+        <div class="card-body">
+          <p class="card-text">{{ product.description3 }}</p>
+      </div>
+    </div>
+     
+      <div class="card" style="height: 40rem;">
+        <img src="{{ product.image3.url }}" class="card-img-top" alt="..." style="width:30%;max-width:300px">
+        <div class="card-body">
+          <p class="card-text">{{ product.description4 }}</p>
+        </div>
+      </div>
+    </div>
+    
+  </center>
+     
+    
+<br/>
+<center>
+  <a href="{% url 'home' %}" class="btn btn-success btn-lg">Home</a>
+</center>
+
+                        
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+                   
+
+{% endblock %}
