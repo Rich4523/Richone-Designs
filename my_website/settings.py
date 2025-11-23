@@ -19,7 +19,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://rone-designs.ca', 'rone-designs.ca', 'richone-designs-production.up.railway.app', 'https://richone-designs-production.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['https://rone-designs.ca', 'https://richone-designs-production.up.railway.app']
