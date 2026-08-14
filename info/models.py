@@ -24,6 +24,8 @@ class Product(models.Model):
 	image1 = models.ImageField(upload_to='uploads/product/')
 	image2 = models.ImageField(upload_to='uploads/product/', blank=True, null=True)
 	image3 = models.ImageField(upload_to='uploads/product/', blank=True, null=True)
+	badge = models.FileField(upload_to='uploads/product/', blank=True, null=True)
+	app_store_url = models.URLField(blank=True, null=True)
 	header = models.CharField(max_length=250, default='', blank=True, null=True)
 	price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
 	available = models.CharField(max_length=250, default='', blank=True, null=True)
